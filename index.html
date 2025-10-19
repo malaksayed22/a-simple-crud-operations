@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="main container text-center">
+        <h1 class="font-script  mt-5  bg-none">Bookmarker</h1>
+    </div>
+    <div class="container mt-5">
+        <hr class="dashed">
+    </div>
+    <div class="container text-center mt-4">     
+        <h2 class="font-script2 d-inline-block"><span class="gradient-text"><i class="fa-solid fa-bookmark fs-3"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark fs-3"></i></span></h2>     
+    </div>
+    <div class="container mt-4">
+        <label for="name"><i class="fa-solid fa-book-tanakh"></i> <span class="fw-bold">site name</span></label>
+        <input oninput="validateInputs(this)" type="text" id="name" placeholder="Bookmark Name" class="bookmark form-control w-100 mx-auto mt-2">
+    </div>
+    <div class="container mt-4">
+        <label for="link"><i class="fa-solid fa-link"></i> <span class="fw-bold">Site URL</span></label>
+        <input oninput="validateInputs(this)" type="url" id="link" placeholder="Website URL" class="form-control w-100 mx-auto mt-2">
+    </div>
+    <div class="container mt-4 text-center">
+        <button onclick="addInputs()" type="button" class="btn px-5 py-2 text-white">Submit</button>
+    </div>
+    <div class="container mt-4">
+        <hr class="dashed">
+    </div>
+
+    <div class="container">
+        <table class="table text-center bg-white">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="tableContent"></tbody>
+        </table>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
